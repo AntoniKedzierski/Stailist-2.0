@@ -1,0 +1,49 @@
+.background {
+  background-image: linear-gradient(#F0EFEC 0%, #E3DBD4 100%);
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.small-margin {
+  margin: 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.app-container .content-space {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.app-container .content-space .margin {
+  flex: 1 10 auto;
+  visibility: hidden;
+}
+
+.app-container .content-space .content-box {
+  background-color: white;
+  box-shadow: 0px 6px 15px #00000045;
+  border-radius: 30px;
+
+  min-height: 72vh;
+  min-width: 400px;
+  max-width: 70vw;
+
+  display: flex;
+  flex: 20 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+}

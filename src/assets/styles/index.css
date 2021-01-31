@@ -1,0 +1,60 @@
+/* File with definitions and global settings  */
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Fonts  */
+@font-face {
+  font-family: 'Forum';
+  src: local('forum'), url(../fonts/forum.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Palace Script';
+  src: local('palace-script'), url(../fonts/palace-script.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Freestyle Script';
+  src: local('freestyle-script'), url(../fonts/freestyle-script.ttf) format('truetype');
+}
+
+/* Definitions */
+:root {
+  --dark-brown: #3F3B38;
+  --white:  #f5f5f5;
+  --brown: #9F693F;
+  --light-brown: #CCB5A3;
+  --gray: #C9C4BE;
+  --creme: #DBBAA0;
+  --min-desktop: 1024px;
+
+  font-family: 'Forum';
+  letter-spacing: 0.5px;
+  color: var(--dark-brown)
+}
+
+.container {
+  width: var(--min-desktop);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  
+  background-image: linear-gradient(#f2eeee, var(--gray));
+  overflow-x: hidden;
+}
+ 
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100vw;
+    overflow-x: none;
+  }
+}
+ 

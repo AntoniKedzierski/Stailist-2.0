@@ -1,0 +1,51 @@
+.navigation-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 0 1 auto;
+
+  background-color: #fefefe;
+  box-shadow: 0px 6px 15px #00000045;
+
+  padding: 25px 0px;
+  margin-bottom: 30px;
+  border-radius: 0px 30px 30px 0px;
+  z-index: 1;
+}
+
+.navigation-button {
+  display: flex;
+  justify-content: fle;
+  align-items: center;
+
+  width: 200px;
+  height: 40px;
+  margin: 5px 20px;
+  padding: 5px 20px;
+
+  border-radius: 30px;
+  background-color: #ffffff;
+
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  cursor: pointer;
+  user-select: none;
+
+  font-family: 'Forum';
+  font-size: 20px;
+}
+
+.navigation-button:hover {
+  background-color: var(--dark-brown);
+  color: var(--white);
+  box-shadow: 0px 2px 6px #00000075;
+}
+
+.active-btn {
+  background-color: var(--dark-brown);
+  color: var(--white);
+  cursor: default;
+}
+
+.active-btn:hover {
+  box-shadow: none;
+}

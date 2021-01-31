@@ -1,0 +1,71 @@
+.personality-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  align-self: flex-start;
+  justify-content: space-between;
+  margin-top: 12px;
+  position: relative;
+}
+
+.personality-container .tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  font-family: 'Forum';
+  font-size: 18px;
+
+  user-select: none;;
+}
+
+.personality-container .tabs span {
+  cursor: pointer;
+  padding: 2px;
+
+  border-bottom: 2px solid #ffffffff;
+  transition: border-bottom 0.4s;
+}
+
+.personality-container .tabs .selected {
+  border-bottom: 2px solid var(--dark-brown);
+  cursor: default;
+}
+
+.personality-container .tabs span:hover {
+  border-bottom: 2px solid var(--dark-brown);
+}
+
+.personality-container .trait-active {
+  font-family: forum;
+  padding: 10px 20px;
+  position: absolute;
+  top: 20px;
+  transform: translateY(0px);
+  z-index: 2;
+
+  visibility: visible;
+  color: var(--dark-brown);
+  transition: transform 1s, z-index 1s, color 1s;
+  margin-top: 30px;
+}
+
+.personality-container .trait-inactive {
+  font-family: forum;
+  padding: 10px 20px;
+  position: absolute;
+  top: 20px;
+  transform: translateY(50px);
+  z-index: 1;
+  color: #ffffffff;
+
+  transition: transform 1s, z-index 1s, color 1s;
+  margin-top: 30px;
+}
+
+

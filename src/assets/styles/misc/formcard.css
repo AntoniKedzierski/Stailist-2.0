@@ -1,0 +1,144 @@
+.form-card {
+  margin: 20px 0px;
+
+  background-color: var(--dark-brown);
+  color: var(--white);
+
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #00000075;
+}
+
+.form-card h2 {
+  text-align: left;
+  padding: 15px 60px 0px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.form-card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 10%;
+  transition: padding 200ms;
+}
+
+@media screen and (max-width:1024px) {
+  .form-card-container {
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width:786px) {
+  .form-card-container {
+    font-size: 13px;
+    padding: 15px 0px;
+  }
+
+  .form-card h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .form-card-container {
+    font-size: 11px;
+    padding: 15px 0px;
+  }
+
+}
+ 
+ 
+ 
+
+.form-card-label {
+  flex: 0 1 100px;
+  text-align: center;
+  margin: 0px 3%;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+ 
+
+.formcard-radio {
+  border: 1px solid var(--creme);
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin: 0px 5px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.formcard-radio-checked {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: 3px;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  transition: background-color 0.2s;
+  background-color: var(--creme);
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.formcard-radio-unchecked {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: 3px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  
+  background-color: transparent;
+  transition: background-color 0.2s;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+
+
+
+.radio-container-vertical {
+  margin: 20px 90px;
+  display: flex;
+  flex-direction: column;
+
+  transition: margin 200ms;
+}
+
+.question-option {
+  display: flex;
+}
+
+.question-option p {
+  padding: 2px 10px;
+}
+
+@media screen and (max-width:786px) {
+  .radio-container-vertical {
+    margin: 20px 10px;
+  }
+
+  .question-option p {
+    text-align: left;
+    font-size: 16px !important;
+  }
+}
+ 
+

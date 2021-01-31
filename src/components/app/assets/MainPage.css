@@ -1,0 +1,12 @@
+.main-app-page {
+  padding: 20px;
+  align-self: flex-start;
+}
+
+.main-app-page h1 {
+  font-weight: normal;
+}
+
+.main-app-page p {
+  font-size: 18px;
+}

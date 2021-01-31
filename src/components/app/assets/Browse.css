@@ -1,0 +1,77 @@
+.browser {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.command-bar {
+  display:  flex;
+  justify-content: space-between;
+
+  padding: 15px 20px 0px;
+
+  font-family: forum;
+  font-size: 26px;
+  color: var(--dark-brown);
+}
+
+.proposition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 600px;
+  width: 400px;
+  margin: 20px;
+
+  border-radius: 30px;
+  border: 1px solid var(--dark-brown);
+  box-shadow: 0px 3px 16px #00000055;
+
+  font-family: 'Forum';
+  color: var(--dark-brown);
+
+  user-select: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.proposition img {
+  width: auto;
+  height: 450px;
+  border-radius: 30px;
+}
+
+.proposition h1 {
+  margin: 0px 0px -10px;
+  padding: 0;
+
+  font-size: 24px;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.proposition .price {
+  margin: -10px 0px 0px;
+  padding: 0;
+
+  font-size: 18px;
+}
+
+.proposition hr {
+  width: 320px;
+  border-color: #e4d9d9;  
+  background-color: #e4d9d9;
+  border: none;
+  height: 1px;
+}
+
+.proposition:hover {
+  background-color: var(--dark-brown);
+  color: var(--white) !important;
+  box-shadow: 0px 6px 12px #00000075;
+}

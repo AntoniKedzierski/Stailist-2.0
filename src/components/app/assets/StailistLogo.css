@@ -1,0 +1,24 @@
+.stailist-logo {
+  position: relative;
+  display: inline-block;
+
+  font-family: 'Palace Script';
+  font-size: 138px;
+  color: #3F3B38;
+  user-select: none;
+}
+
+.stailist-logo .s {
+  font-family: 'Palace Script';
+  font-size: 281px;
+  color: #3F3B381A;
+  transform: rotate(13deg);
+  position: absolute;
+  user-select: none;
+  left: -20px;
+  top: -75px;
+}
+
+.stailist-logo span {
+  display: inline-block;
+}

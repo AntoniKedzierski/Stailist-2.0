@@ -1,0 +1,32 @@
+#logo {
+  font-family: 'Palace Script';
+  position: relative;
+  height: 100%;
+  display: inline-block;
+}
+
+#logo-stailist-text {
+  font-size: 80px;
+  text-decoration: none;
+  color: var(--dark-brown);
+
+  position: absolute;
+  height: 80px;
+  transform: translateY(-60%) translateX(-49%);
+  z-index: 2;
+}
+
+#s-letter {
+  font-size: 165px;
+  color: var(--dark-brown);
+  opacity: 0.15;
+
+  position: absolute;
+  user-select: none;
+  z-index: 1;
+  
+  transform: translateY(-47.5%) translateX(-80%) rotate(13deg);
+}
+
+
+ 
