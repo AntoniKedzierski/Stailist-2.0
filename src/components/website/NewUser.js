@@ -12,23 +12,22 @@ import Register from './NewUserForm/Register';
 const Views = Object.freeze({ageAndSex: 1, bigFive: 2, colors: 3, styles: 4, 
   brands: 5, lifestyle: 6, prices: 7, register: 8, app: 9});
 
-const exportToJson = (objectData) => {
-  let filename = "export.json";
-  let contentType = "application/json;charset=utf-8;";
-  if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-    var blob = new Blob([decodeURIComponent(encodeURI(JSON.stringify(objectData)))], { type: contentType });
-    navigator.msSaveOrOpenBlob(blob, filename);
-  } else {
-    var a = document.createElement('a');
-    a.download = filename;
-    a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(objectData));
-    a.target = '_blank';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
-}
-
+// const exportToJson = (objectData) => {
+//   let filename = "export.json";
+//   let contentType = "application/json;charset=utf-8;";
+//   if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+//     var blob = new Blob([decodeURIComponent(encodeURI(JSON.stringify(objectData)))], { type: contentType });
+//     navigator.msSaveOrOpenBlob(blob, filename);
+//   } else {
+//     var a = document.createElement('a');
+//     a.download = filename;
+//     a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(objectData));
+//     a.target = '_blank';
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+//   }
+// }
 
 
 export default class NewUser extends Component {
@@ -69,6 +68,7 @@ export default class NewUser extends Component {
         return <Register onCompletePage={result => this.nextPage(result, Views.app)}/>
       case Views.app:
         window.location.assign(`/app?username=${this.state.userData.username}&usersex=${this.state.userData.sex}`);
+        break;
       default: return <div>ERROR</div>
     }
   }
