@@ -38,11 +38,6 @@ export default class Register extends Component {
     this.timer = setInterval(this.changeAction, 200);
   } 
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log(this.state);
-  }
-  
-
   render() {
     return (
       <div id="register-page">

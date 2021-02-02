@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import 'whatwg-fetch';
+import axios from 'axios';
 
 // Import components
 import AgeAndSex from './NewUserForm/AgeAndSex';
@@ -36,10 +38,6 @@ export default class NewUser extends Component {
     displayPage: Views.ageAndSex
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
-  }
-
   nextPage = (result, page) => {
     this.setState({
       userData: {
@@ -67,7 +65,19 @@ export default class NewUser extends Component {
       case Views.register:
         return <Register onCompletePage={result => this.nextPage(result, Views.app)}/>
       case Views.app:
-        window.location.assign(`/app?username=${this.state.userData.username}&usersex=${this.state.userData.sex}`);
+        console.log("Wysyłam do bazy danych...");
+        console.log(this.state.userData);
+
+        axios.post(
+          "http://109.74.197.52:5000/stailistResults", 
+          this.state.userData,  
+          { withCredentials: false })
+        .then(response => {
+          console.log(response);
+          console.log(response.data);
+        })
+        console.log("Wysłano!"); 
+        window.location.assign(`/app?username=${this.state.userData.username}`); 
         break;
       default: return <div>ERROR</div>
     }
