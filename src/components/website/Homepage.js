@@ -69,7 +69,7 @@ export default class Homepage extends Component {
         <div id="powered-by-ai" className={this.state.y < 650 ? "powered-by-ai hidden" : "powered-by-ai visible"}>
           powered by A.I.
           <br/>
-          Oszczedzaj czas, odkrywaj inspiacje.
+          Oszczedzaj czas, odkrywaj inspiracje.
         </div>
       </div>
     )
