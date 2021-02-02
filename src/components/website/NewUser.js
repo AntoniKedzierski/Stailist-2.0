@@ -75,9 +75,9 @@ export default class NewUser extends Component {
         .then(response => {
           console.log(response);
           console.log(response.data);
+          console.log("Wysłano!"); 
+          window.location.assign(`/app?username=${this.state.userData.username}`); 
         })
-        console.log("Wysłano!"); 
-        window.location.assign(`/app?username=${this.state.userData.username}`); 
         break;
       default: return <div>ERROR</div>
     }
